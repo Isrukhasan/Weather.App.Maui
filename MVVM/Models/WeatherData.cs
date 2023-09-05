@@ -9,7 +9,7 @@
         public int utc_offset_seconds { get; set; }
         public string timezone { get; set; }
         public string timezone_abbreviation { get; set; }
-        public int elevation { get; set; }
+        //public int elevation { get; set; }
         public Current_Weather current_weather { get; set; }
         public Hourly_Units hourly_units { get; set; }
         public Hourly hourly { get; set; }

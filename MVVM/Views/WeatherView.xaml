@@ -30,8 +30,8 @@
 
         <Grid Grid.Row="3" ColumnDefinitions="*,*,*">
             <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
-                <Label Style="{StaticResource WeatherTitle}" Text="Temp" />
-                <Label Style="{StaticResource WeatherValue}" Text="50°" />
+                <Label Style="{StaticResource WeatherTitle}" Text="Temperature" />
+                <Label Style="{StaticResource WeatherValue}" Text="{Binding WeatherData.Current_Weather.temperature, StringFormat='{0}°'}" />
             </VerticalStackLayout>
 
             <VerticalStackLayout
@@ -40,7 +40,7 @@
                 Spacing="10">
 
                 <Label Style="{StaticResource WeatherTitle}" Text="Wind" />
-                <Label Style="{StaticResource WeatherValue}" Text="10Kmph" />
+                <Label Style="{StaticResource WeatherValue}" Text="{Binding WeatherData.windspeed, StringFormat='{0}km/h'}" />
             </VerticalStackLayout>
 
             <VerticalStackLayout
@@ -48,7 +48,7 @@
                 HorizontalOptions="Center"
                 Spacing="10">
                 <Label Style="{StaticResource WeatherTitle}" Text="Weather" />
-                <Label Style="{StaticResource WeatherValue}" Text="Sunny" />
+                <Label Style="{StaticResource WeatherValue}" Text="{Binding WeatherData.weathercode}" />
             </VerticalStackLayout>
         </Grid>
         <CollectionView Grid.Row="4">
